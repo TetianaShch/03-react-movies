@@ -8,3 +8,6 @@ createRoot(document.getElementById('root')!).render(
     <App />
   </StrictMode>,
 )
+
+console.log(import.meta.env.VITE_TMDB_TOKEN);
+
