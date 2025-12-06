@@ -6,7 +6,7 @@ interface SearchBarProps {
 }
 
 export default function SearchBar({ onSubmit }: SearchBarProps) {
-  
+
   const handleSubmit = (formData: FormData) => {
     const rawValue = formData.get('query');
     const query = typeof rawValue === 'string' ? rawValue.trim() : '';
