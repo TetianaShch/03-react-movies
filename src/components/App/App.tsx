@@ -10,7 +10,7 @@ import Loader from '../Loader/Loader';
 import ErrorMessage from '../ErrorMessage/ErrorMessage';
 import MovieModal from '../MovieModal/MovieModal';
 
-import { searchMovies } from '../../services/api';
+import { searchMovies } from '../../services/movieService';
 import type { Movie } from '../../types/movie';
 
 export default function App() {
