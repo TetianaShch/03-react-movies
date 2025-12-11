@@ -17,7 +17,7 @@ export default function App() {
   const [query, setQuery] = useState('');
   const [movies, setMovies] = useState<Movie[]>([]);
   const [isLoading, setIsLoading] = useState(false);
-  const [error, setError] = useState<string | null>(null);
+  const [error, setError] = useState(false);
   const [selectedMovie, setSelectedMovie] = useState<Movie | null>(null);
 
   const handleSearch = (newQuery: string) => {
@@ -38,7 +38,7 @@ export default function App() {
     const fetchMovies = async () => {
       try {
         setIsLoading(true);
-        setError(null);
+        setError(false);
 
         const results = await searchMovies(query);
 
@@ -50,7 +50,7 @@ export default function App() {
 
         setMovies(results);
       } catch {
-        setError('true');
+        setError(true);
         toast.error('There was an error, please try again...');
       } finally {
         setIsLoading(false);
